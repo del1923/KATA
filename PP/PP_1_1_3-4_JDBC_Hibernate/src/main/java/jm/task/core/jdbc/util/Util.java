@@ -20,7 +20,6 @@ public class Util {
     private static final String PASSWORD = "root";
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-
     static {
         try {
             Class.forName(DRIVER); //Проверяем наличие JDBC драйвера для работы с БД
@@ -31,19 +30,23 @@ public class Util {
             System.out.println(e);
         }
     }
-    public static Connection createConnection() throws SQLException { //создаём подключение к БД
-        return DriverManager.getConnection( URL, USER, PASSWORD ); //передавая адрес, пользователя, пароль
+
+    public Connection connect; //создаём подключение к БД
+
+    {
+        try {
+            connect = DriverManager.getConnection( URL, USER, PASSWORD ); //передавая адрес, пользователя, пароль
+            System.out.println("Соединение с БД установлено");
+        } catch (SQLException e) {
+            System.out.println("Соединения с БД нет");
+            throw new RuntimeException(e);
+        }
     }
-
-/*
-Connection connection = DriverManager.getConnection(URL); //тест соединения с БД
-            System.out.println("Соединение с СУБД выполнено.");
-            connection.close();       // отключение от БД
-            System.out.println("Отключение от СУБД выполнено.");
- */
-
-
-
-
-
 }
+
+
+
+
+
+
+
