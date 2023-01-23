@@ -7,7 +7,7 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     public void createUsersTable() {
         /*
-        добавить сервис создания БД
+        добавить создание  БД
          */
 
     }
