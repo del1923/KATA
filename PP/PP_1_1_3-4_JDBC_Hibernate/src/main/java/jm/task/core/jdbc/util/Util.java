@@ -7,13 +7,19 @@ import java.sql.SQLException;
 
 public class Util {
     /*
-    подключиться к нашей БД:
+    проверить наличие нужного драйвера:
+    сообщить название драйвера DRIVER
+
+    проверить подключение к нашей БД:
     указать путь URL
     передать имя пользователя USER
     передать пароль PASSWORD
-    сообщить название драйвера DRIVER
-    проверить наличие нужного драйвера
-    создать подключение
+
+    создать подключение к БД для дальнейшего использования:
+    URL
+    USER
+    PASSWORD
+
      */
     private static final String URL = "jdbc:mysql://localhost:3306/dbforjava";
     private static final String USER = "root";
