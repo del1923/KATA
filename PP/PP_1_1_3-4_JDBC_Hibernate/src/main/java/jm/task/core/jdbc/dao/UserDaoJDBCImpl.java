@@ -16,6 +16,7 @@ public class UserDaoJDBCImpl implements UserDao {
         3) обработать возможные исключения
         */
 
+
     }
 
     public void dropUsersTable() {
