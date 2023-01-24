@@ -6,18 +6,10 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService {
     public void createUsersTable() {
-        /*
-        добавить создание  БД
-         */
-
-    }
+            }
 
     public void dropUsersTable() {
-        /*
-        добавить сервис удаления БД
-         */
-
-    }
+        }
 
     public void saveUser(String name, String lastName, byte age) {
 
