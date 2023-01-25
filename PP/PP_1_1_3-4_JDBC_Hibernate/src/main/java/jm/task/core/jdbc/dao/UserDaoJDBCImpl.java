@@ -4,22 +4,24 @@ import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
 /*
-    Тут создаём методы и запросы на таблицу
+    Тут создаём один раз подключение и
+    методы с запросами на таблицу user
  */
 
 
 public class UserDaoJDBCImpl implements UserDao {
+
+    Connection connection = Util.cteateConnection();//создаём подключение
+
+
     public UserDaoJDBCImpl() {
-
     }
-
-    Connection connection = Util.cteateConnection(); //создаём подключение
-
 
     public void createUsersTable() {
         /* написать создание таблицы User:
@@ -27,35 +29,43 @@ public class UserDaoJDBCImpl implements UserDao {
         2) формируется SQL запрос создания таблицы
         3) обработать возможные исключения
         */
-            String sql= "CREATE TABLE IS NOT EXISTS user " +
-                        "(id serial primary key," +
-                        "name varchar(40)," +
-                        "lastName varchar(40)," +
+        final String SQL = "CREATE TABLE IF NOT EXISTS User " +
+                        "(id int not null primary key auto_increment," +
+                        "name varchar(40) not null," +
+                        "lastname varchar(40)," +
                         "age int)";
+
         try {
             Statement statement = connection.createStatement(); // создаём statement
-            statement.executeUpdate(sql); //выполняем запрос SQL
+            statement.executeUpdate(SQL); //выполняем запрос SQL
         } catch (SQLException e) { //если отловили исключение
             throw new RuntimeException(e); //роняем программу
         }
     }
 
-      /*       "(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT," +
-                "name VARCHAR(45)," +
-                "lastName VARCHAR(45)," +
-                "age TINYINT(3))";
-       */
-
-
     public void dropUsersTable() {
+        final String SQL = "DROP TABLE IF EXISTS User"; //удаление таблицы
+        try {
+            Statement statement = connection.createStatement(); // создаём statement
+            statement.executeUpdate(SQL); //выполняем запрос SQL
+        } catch (SQLException e) { //если отловили исключение
+            throw new RuntimeException(e); //роняем программу
+        }
 
 
     }
 
-    public void saveUser(String name, String lastName, byte age) {
+    public void saveUser( String name, String lastname, byte age) {
+        final String SQL = "INSERT INTO User (name, lastname, age) VALUES ( ?, ?, ?)";
 
-
-
+        try (PreparedStatement statement = connection.prepareStatement(SQL)) { // создаём statement
+                statement.setString(1, name);
+                statement.setString(2, lastname);
+                statement.setByte(3, age);
+                statement.executeUpdate();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
     }
 
     public void removeUserById(long id) {
@@ -67,6 +77,12 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void cleanUsersTable() {
-
+        final String SQL = "DELETE FROM User"; //очищаем таблицу
+        try {
+            Statement statement = connection.createStatement(); // создаём statement
+            statement.executeUpdate(SQL); //выполняем запрос SQL
+        } catch (SQLException e) { //если отловили исключение
+            throw new RuntimeException(e); //роняем программу
+        }
     }
 }
