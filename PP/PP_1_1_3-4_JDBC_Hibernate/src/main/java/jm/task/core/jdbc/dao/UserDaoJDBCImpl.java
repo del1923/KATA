@@ -17,10 +17,16 @@ public class UserDaoJDBCImpl implements UserDao {
 
     Connection connection = Util.cteateConnection();//создаём подключение
 
-
     public UserDaoJDBCImpl() {
     }
-
+    private void executeAndCheck(String SQL) { //выполняем SQL и отлавливаем исключения
+        try {
+            Statement statement = connection.createStatement(); // создаём statement
+            statement.executeUpdate(SQL); //выполняем запрос SQL
+        } catch (SQLException e) { //если отловили исключение
+            throw new RuntimeException(e); //роняем программу
+        }
+    }
     public void createUsersTable() {
         /* написать создание таблицы User:
         1) устанавливаем соединение с БД -> вынести перед методами
@@ -32,25 +38,12 @@ public class UserDaoJDBCImpl implements UserDao {
                         "name varchar(40) not null," +
                         "lastname varchar(40)," +
                         "age int)";
-
-        try {
-            Statement statement = connection.createStatement(); // создаём statement
-            statement.executeUpdate(SQL); //выполняем запрос SQL
-        } catch (SQLException e) { //если отловили исключение
-            throw new RuntimeException(e); //роняем программу
-        }
+        executeAndCheck( SQL );
     }
 
     public void dropUsersTable() {
         final String SQL = "DROP TABLE IF EXISTS User"; //удаление таблицы
-        try {
-            Statement statement = connection.createStatement(); // создаём statement
-            statement.executeUpdate(SQL); //выполняем запрос SQL
-        } catch (SQLException e) { //если отловили исключение
-            throw new RuntimeException(e); //роняем программу
-        }
-
-
+        executeAndCheck( SQL );
     }
 
     public void saveUser( String name, String lastName, byte age) {
@@ -75,7 +68,6 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public List<User> getAllUsers() {
@@ -98,11 +90,6 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void cleanUsersTable() {
         final String SQL = "TRUNCATE user"; //очищаем таблицу
-        try {
-            Statement statement = connection.createStatement(); // создаём statement
-            statement.executeUpdate(SQL); //выполняем запрос SQL
-        } catch (SQLException e) { //если отловили исключение
-            throw new RuntimeException(e); //роняем программу
-        }
+        executeAndCheck( SQL );
     }
 }
