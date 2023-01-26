@@ -4,6 +4,7 @@ import jm.task.core.jdbc.dao.UserDao;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
@@ -24,11 +25,7 @@ public class UserServiceImpl implements UserService {
     public void saveUser(String name,
                          String lastName,
                          byte age) {
-        this.name = name;
-        this.lastName = lastName;
-        this.age = age;
         userDao.saveUser(name, lastName, age);
-
     }
 
     public void removeUserById(long id) {
@@ -36,7 +33,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public List<User> getAllUsers() {
-        return null;
+        return userDao.getAllUsers();
     }
 
     public void cleanUsersTable() {
