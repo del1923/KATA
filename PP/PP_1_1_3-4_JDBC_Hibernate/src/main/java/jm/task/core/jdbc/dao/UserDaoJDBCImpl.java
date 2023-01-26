@@ -58,7 +58,7 @@ public class UserDaoJDBCImpl implements UserDao {
     public void saveUser( String name, String lastname, byte age) {
         final String SQL = "INSERT INTO User (name, lastname, age) VALUES ( ?, ?, ?)";
 
-        try (PreparedStatement statement = connection.prepareStatement(SQL)) { // создаём statement
+        try (PreparedStatement statement = connection.prepareStatement(SQL)) {
                 statement.setString(1, name);
                 statement.setString(2, lastname);
                 statement.setByte(3, age);
@@ -69,6 +69,14 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void removeUserById(long id) {
+        final String SQL = "DELETE FROM user WHERE id = ?";
+
+        try (PreparedStatement statement = connection.prepareStatement(SQL)) {
+            statement.setLong(1, id);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -77,7 +85,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void cleanUsersTable() {
-        final String SQL = "DELETE FROM User"; //очищаем таблицу
+        final String SQL = "TRUNCATE user"; //очищаем таблицу
         try {
             Statement statement = connection.createStatement(); // создаём statement
             statement.executeUpdate(SQL); //выполняем запрос SQL
