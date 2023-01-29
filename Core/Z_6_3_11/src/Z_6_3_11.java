@@ -15,6 +15,7 @@ public class Z_6_3_11 {
 6. Собака должна ловить кошку
 
  */
+
     public static class Cat {            //создаём класс кошка
         public void sayHello() {         //метод говорим МЯУ
             System.out.println( "Мяу!" );
@@ -30,5 +31,4 @@ public class Z_6_3_11 {
             cat.sayHello(); //говорим МЯУ кошкой. cat а не Cat т.к. объект Cat передан переменной cat(?)
         }
     }
-
 }
