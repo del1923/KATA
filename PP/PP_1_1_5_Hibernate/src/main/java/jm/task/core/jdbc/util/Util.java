@@ -10,7 +10,10 @@ import org.hibernate.SessionFactory;
 import jm.task.core.jdbc.model.User;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
+
+import java.util.Properties;
 
 public class Util {
     /*
@@ -63,26 +66,40 @@ public class Util {
     */
     // описываем SessionFactory
     public static SessionFactory getConnection() {
+         if (sessionFactory == null) {
+            try {
+                Configuration configuration = new Configuration();
 
-        try {
-            Configuration configuration = new Configuration()
-                    .setProperty("hibernate.connection.driver_class", DRIVER)
-                    .setProperty("hibernate.connection.url", URL)
-                    .setProperty("hibernate.connection.username", USER)
-                    .setProperty("hibernate.connection.password", PASSWORD)
-                    .setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect")
-                    .addAnnotatedClass(User.class)
-                    .setProperty("hibernate.c3p0.min_size","5")
-                    .setProperty("hibernate.c3p0.max_size","200")
-                    .setProperty("hibernate.c3p0.max_statements","200");
+                // прописываем настройки
+                Properties settings = new Properties();
 
-            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
+                settings.put(Environment.DRIVER,"com.mysql.cj.jdbc.Driver");
+                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/hibernate_db?useSSL=false");
+                settings.put(Environment.USER, "root");
+                settings.put(Environment.PASS, "root");
+                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
+
+                settings.put(Environment.SHOW_SQL, "true");
+
+                settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
+
+                settings.put(Environment.HBM2DDL_AUTO, "");
+
+                configuration.setProperties(settings);
+
+                configuration.addAnnotatedClass(User.class);
+
+                ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties()).build();
-            sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-        } catch (HibernateException e) {
-            e.printStackTrace();
+
+                sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         return sessionFactory;
+
+
     }
 
 
