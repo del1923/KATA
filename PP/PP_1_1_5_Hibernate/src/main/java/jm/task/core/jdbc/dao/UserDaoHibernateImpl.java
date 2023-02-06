@@ -30,6 +30,7 @@ public class UserDaoHibernateImpl implements UserDao {
     String report = "";
     private String executeAndCheck(String SQL) { //выполняем SQL и отлавливаем исключения
         Session session = sessionFactory.openSession(); // открываем сессию
+        System.out.println("Сессия открыта");
         Transaction transaction = session.beginTransaction(); // старт транзакции
         try {session.createNativeQuery(SQL).executeUpdate();
             transaction.commit();
@@ -56,10 +57,17 @@ public class UserDaoHibernateImpl implements UserDao {
         System.out.println("Создание таблицы");
         executeAndCheck(SQL);
         System.out.println(report);
+        System.out.println();
     }
 
     @Override
     public void dropUsersTable() {
+
+        final String SQL = "DROP TABLE IF EXISTS User"; //удаление таблицы
+        System.out.println("Удаление таблицы");
+        executeAndCheck(SQL);
+        System.out.println(report);
+        System.out.println();
 
     }
 
@@ -70,11 +78,20 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void removeUserById(long id) {
+        System.out.println("Удаление пользователя по ID");
+        /*
+        final String SQL = "DELETE FROM user WHERE id = ?";
+
+        */
+        System.out.println(report);
+        System.out.println();
 
     }
 
     @Override
     public List<User> getAllUsers() {
+
+
         /*
         Session session = sessionFactory.openSession(); // открываем сессию
         Transaction transaction = session.beginTransaction(); // старт транзакции
@@ -99,6 +116,10 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void cleanUsersTable() {
-
+        System.out.println("Очистка таблицы");
+        final String SQL = "TRUNCATE user"; //очищаем таблицу
+        executeAndCheck( SQL );
+        System.out.println(report);
+        System.out.println();
     }
 }
