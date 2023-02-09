@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
@@ -109,9 +110,27 @@ public class UserDaoHibernateImpl implements UserDao {
             System.out.println("Сессия закрыта");
         }
          */
-
-
-        return null;
+        System.out.println("Получение списка пользователей");
+        Session session = sessionFactory.openSession(); // открываем сессию
+        System.out.println("Сессия открыта");
+        Transaction transaction = session.beginTransaction(); // старт транзакции
+        CriteriaQuery<User> criteriaQuery = session.getCriteriaBuilder().createQuery(User.class);
+        criteriaQuery.from(User.class);
+        List<User> userList = session.createQuery(criteriaQuery).getResultList();
+        try {
+            transaction.commit();
+            System.out.println("Операция успешно выполнена");
+            return userList;
+        } catch ( HibernateException e) {
+            System.out.println("Ошибка, операция не выполнена");
+            e.printStackTrace();
+        } finally {
+            session.close();
+            System.out.println("Сессия закрыта");
+            System.out.println();
+        }
+        System.out.println();
+        return userList;
     }
 
     @Override
