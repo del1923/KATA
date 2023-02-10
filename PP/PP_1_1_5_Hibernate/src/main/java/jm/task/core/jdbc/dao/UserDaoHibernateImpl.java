@@ -69,47 +69,54 @@ public class UserDaoHibernateImpl implements UserDao {
         executeAndCheck(SQL);
         System.out.println(report);
         System.out.println();
-
     }
 
     @Override
     public void saveUser(String name, String lastName, byte age) {
-
+        System.out.println("Добавление пользователя " + name);
+        Session session = sessionFactory.openSession(); // открываем сессию
+        System.out.println("Сессия открыта");
+        Transaction transaction = session.beginTransaction(); // старт транзакции
+//        User user = new User();
+//        user.setName (name);
+//        user.setLastName(lastName);
+//        user.setAge(age);
+        try {
+            session.save(new User( name, lastName, age));
+            System.out.println("Операция успешно выполнена");
+            transaction.commit();
+        } catch ( HibernateException e ) {
+            e.printStackTrace();
+            System.out.println("Ошибка, операция не выполнена");
+        } finally {
+            session.close();
+            System.out.println("Сессия закрыта");
+            System.out.println();
+        }
     }
 
     @Override
     public void removeUserById(long id) {
-        System.out.println("Удаление пользователя по ID");
-        /*
-        final String SQL = "DELETE FROM user WHERE id = ?";
-
-        */
-        System.out.println(report);
-        System.out.println();
-
+        System.out.println("Удаление пользователя по ID:" + id);
+        Session session = sessionFactory.openSession(); // открываем сессию
+        System.out.println("Сессия открыта");
+        Transaction transaction = session.beginTransaction(); // старт транзакции
+        try {
+            session.delete(session.get(User.class, id));
+            System.out.println("Операция успешно выполнена");
+            transaction.commit();
+        } catch ( HibernateException e ) {
+            e.printStackTrace();
+            System.out.println("Ошибка, операция не выполнена");
+        } finally {
+            session.close();
+            System.out.println("Сессия закрыта");
+            System.out.println();
+        }
     }
 
     @Override
     public List<User> getAllUsers() {
-
-
-        /*
-        Session session = sessionFactory.openSession(); // открываем сессию
-        Transaction transaction = session.beginTransaction(); // старт транзакции
-        try {session.createNativeQuery(SQL).executeUpdate();
-            transaction.commit();
-            report = "Операция успешно выполнена";
-        } catch (HibernateException e) {
-            e.printStackTrace();
-            if (transaction != null) {
-                report = "Ошибка, отмена операции";
-                transaction.rollback();
-            }
-        } finally {
-            session.close();
-            System.out.println("Сессия закрыта");
-        }
-         */
         System.out.println("Получение списка пользователей");
         Session session = sessionFactory.openSession(); // открываем сессию
         System.out.println("Сессия открыта");
