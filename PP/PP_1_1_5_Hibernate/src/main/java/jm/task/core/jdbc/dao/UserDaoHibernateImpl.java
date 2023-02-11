@@ -6,8 +6,8 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
-import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
@@ -33,7 +33,8 @@ public class UserDaoHibernateImpl implements UserDao {
         Session session = sessionFactory.openSession(); // открываем сессию
         System.out.println("Сессия открыта");
         Transaction transaction = session.beginTransaction(); // старт транзакции
-        try {session.createNativeQuery(SQL).executeUpdate();
+        try {
+            session.createNativeQuery(SQL).executeUpdate();
             transaction.commit();
             report = "Операция успешно выполнена";
         } catch (HibernateException e) {
@@ -44,7 +45,7 @@ public class UserDaoHibernateImpl implements UserDao {
             }
         } finally {
             session.close();
-            System.out.println("Сессия закрыта");
+            report = report + ", cессия закрыта";
         }
         return report;
         }
@@ -87,7 +88,10 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
         } catch ( HibernateException e ) {
             e.printStackTrace();
-            System.out.println("Ошибка, операция не выполнена");
+            if (transaction != null) {
+                report = "Ошибка, отмена операции";
+                transaction.rollback();
+            }
         } finally {
             session.close();
             System.out.println("Сессия закрыта");
@@ -102,17 +106,37 @@ public class UserDaoHibernateImpl implements UserDao {
         System.out.println("Сессия открыта");
         Transaction transaction = session.beginTransaction(); // старт транзакции
         try {
-            session.delete(session.get(User.class, id));
-            System.out.println("Операция успешно выполнена");
+            Query query = session.createQuery("DELETE User WHERE id = :id");
+            query.setParameter("id", id);
+            int rows = query.executeUpdate();
+            System.out.println("Удалено строк: " + rows);
             transaction.commit();
-        } catch ( HibernateException e ) {
+        } catch ( HibernateException e) {
             e.printStackTrace();
-            System.out.println("Ошибка, операция не выполнена");
+            if (transaction != null) {
+                report = "Ошибка, отмена операции";
+                transaction.rollback();
+            }
         } finally {
             session.close();
             System.out.println("Сессия закрыта");
             System.out.println();
         }
+        /*
+        try {
+            session.delete(session.load(User.class, id));
+            System.out.println("Операция успешно выполнена");
+            transaction.commit();
+        } catch ( HibernateException e ) {
+            e.printStackTrace();
+            System.out.println("Ошибка, операция не выполнена");
+            transaction.rollback();
+        } finally {
+            session.close();
+            System.out.println("Сессия закрыта");
+            System.out.println();
+        }
+         */
     }
 
     @Override
@@ -129,8 +153,11 @@ public class UserDaoHibernateImpl implements UserDao {
             System.out.println("Операция успешно выполнена");
             return userList;
         } catch ( HibernateException e) {
-            System.out.println("Ошибка, операция не выполнена");
             e.printStackTrace();
+            if (transaction != null) {
+                report = "Ошибка, отмена операции";
+                transaction.rollback();
+            }
         } finally {
             session.close();
             System.out.println("Сессия закрыта");
