@@ -6,68 +6,55 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-
-import javax.persistence.Query;
-import javax.persistence.criteria.CriteriaQuery;
+import org.hibernate.query.Query;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
     public UserDaoHibernateImpl() {
 
     }
-    /*
-    Добавить создание подключения через SessionFactory
-    Добавить переоределение методов как в JDBCImpl
-
-
-     открыть сессию sessionFactory.openSession()
-     старт транзакции из sessionFactory
-     создать запрос через createNativeQuery
-        если запрос успешен - коммит транзакци
-        если не успешен или исключение - ролбек транзакции
-        ЗАКРЫТЬ сессию
-     */
     private final SessionFactory sessionFactory = Util.getConnection(); // получаем подключение через SessionFactory
-    String report = "";
-    private String executeAndCheck(String SQL) { //выполняем SQL и отлавливаем исключения
+    StringBuilder report = new StringBuilder();
+    private StringBuilder executeAndCheck(String SQL) { //выполняем SQL и отлавливаем исключения
         Session session = sessionFactory.openSession(); // открываем сессию
         System.out.println("Сессия открыта");
         Transaction transaction = session.beginTransaction(); // старт транзакции
-        try {session.createNativeQuery(SQL).executeUpdate();
+        try {
+            session.createNativeQuery(SQL).executeUpdate();
             transaction.commit();
-            report = "Операция успешно выполнена";
+            report = report.append("Операция успешно выполнена");
         } catch (HibernateException e) {
             e.printStackTrace();
             if (transaction != null) {
-                report = "Ошибка, отмена операции";
+                report = report.append("Ошибка, отмена операции");
                 transaction.rollback();
             }
         } finally {
             session.close();
-            System.out.println("Сессия закрыта");
+            report = report.append(", cессия закрыта");
         }
         return report;
         }
     @Override
     public void createUsersTable() {
-        final String SQL = "CREATE TABLE IF NOT EXISTS User " +
+        System.out.println("Создание таблицы");
+        executeAndCheck("CREATE TABLE IF NOT EXISTS User " +
                 "(id int not null primary key auto_increment," +
                 "name varchar(40) not null," +
                 "lastname varchar(40)," +
-                "age int)";
-        System.out.println("Создание таблицы");
-        executeAndCheck(SQL);
+                "age int)");
         System.out.println(report);
+        report.delete(0, 45);
         System.out.println();
     }
 
     @Override
-    public void dropUsersTable() {
-
-        final String SQL = "DROP TABLE IF EXISTS User"; //удаление таблицы
+    public void dropUsersTable() { //удаление таблицы
         System.out.println("Удаление таблицы");
-        executeAndCheck(SQL);
+        executeAndCheck("DROP TABLE IF EXISTS User");
         System.out.println(report);
+        report.delete(0, 45);
         System.out.println();
     }
 
@@ -77,17 +64,16 @@ public class UserDaoHibernateImpl implements UserDao {
         Session session = sessionFactory.openSession(); // открываем сессию
         System.out.println("Сессия открыта");
         Transaction transaction = session.beginTransaction(); // старт транзакции
-//        User user = new User();
-//        user.setName (name);
-//        user.setLastName(lastName);
-//        user.setAge(age);
         try {
             session.save(new User( name, lastName, age));
             System.out.println("Операция успешно выполнена");
             transaction.commit();
         } catch ( HibernateException e ) {
             e.printStackTrace();
-            System.out.println("Ошибка, операция не выполнена");
+            if (transaction != null) {
+                System.out.println("Ошибка, отмена операции");
+                transaction.rollback();
+            }
         } finally {
             session.close();
             System.out.println("Сессия закрыта");
@@ -102,12 +88,17 @@ public class UserDaoHibernateImpl implements UserDao {
         System.out.println("Сессия открыта");
         Transaction transaction = session.beginTransaction(); // старт транзакции
         try {
-            session.delete(session.get(User.class, id));
-            System.out.println("Операция успешно выполнена");
+            Query query = session.createQuery("DELETE User WHERE id = :id");
+            query.setParameter("id", id);
+            int rows = query.executeUpdate();
+            System.out.println("Удалено строк: " + rows);
             transaction.commit();
-        } catch ( HibernateException e ) {
+        } catch ( HibernateException e) {
             e.printStackTrace();
-            System.out.println("Ошибка, операция не выполнена");
+            if (transaction != null) {
+                System.out.println("Ошибка, отмена операции");
+                transaction.rollback();
+            }
         } finally {
             session.close();
             System.out.println("Сессия закрыта");
@@ -121,16 +112,18 @@ public class UserDaoHibernateImpl implements UserDao {
         Session session = sessionFactory.openSession(); // открываем сессию
         System.out.println("Сессия открыта");
         Transaction transaction = session.beginTransaction(); // старт транзакции
-        CriteriaQuery<User> criteriaQuery = session.getCriteriaBuilder().createQuery(User.class);
-        criteriaQuery.from(User.class);
-        List<User> userList = session.createQuery(criteriaQuery).getResultList();
+        List<User> userList = new ArrayList<>();
         try {
+            userList = session.createQuery("FROM User", User.class).list();
             transaction.commit();
             System.out.println("Операция успешно выполнена");
             return userList;
         } catch ( HibernateException e) {
-            System.out.println("Ошибка, операция не выполнена");
             e.printStackTrace();
+            if (transaction != null) {
+                System.out.println("Ошибка, отмена операции");
+                transaction.rollback();
+            }
         } finally {
             session.close();
             System.out.println("Сессия закрыта");
@@ -142,10 +135,11 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void cleanUsersTable() {
-        System.out.println("Очистка таблицы");
-        final String SQL = "TRUNCATE user"; //очищаем таблицу
-        executeAndCheck( SQL );
+        System.out.println();
+        System.out.println("Очистка таблицы"); //очищаем таблицу
+        executeAndCheck( "TRUNCATE user" );
         System.out.println(report);
+        report.delete(0, 45);
         System.out.println();
     }
 }
