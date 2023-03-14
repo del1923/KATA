@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f934133f-9070-4e66-bf82-8d31ae6016eb" name="Changes" comment="ВЫПОЛНЕНО добавлен .gitignore (перемещён)">
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_10/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_10/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_10/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_10/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_10/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_10/Z_10_2_10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_11/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_11/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_11/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_11/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_11/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_11/Z_10_2_11.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_13/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_13/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_13/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_13/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_10_2_13/Z_10_2_13.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_11/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_11/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_11/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_11/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_11/Z_6_3_11.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_12/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_12/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_12/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_12/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_12/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_12/Z_6_3_12.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_13/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_13/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_13/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_13/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_13/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_3_13/Z_6_3_13.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_4_8/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_4_8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_4_8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_4_8/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_4_8/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/Z_6_4_8/Z_6_4_8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/untitled/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/untitled/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/untitled/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/untitled/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/untitled/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Core/untitled/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../FizzBuzz/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../FizzBuzz/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../FizzBuzz/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../FizzBuzz/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../FizzBuzz/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../FizzBuzz/FizzBuzz.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/dataSources/bd172489-4386-4ce3-b0bc-b0018819edf3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/dataSources/bd172489-4386-4ce3-b0bc-b0018819edf3/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/dataSources/bd172489-4386-4ce3-b0bc-b0018819edf3/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/dataSources/bd172489-4386-4ce3-b0bc-b0018819edf3/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/dataSources/bd172489-4386-4ce3-b0bc-b0018819edf3/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/PP_1_1_5_Hibernate.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/bd172489-4386-4ce3-b0bc-b0018819edf3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/bd172489-4386-4ce3-b0bc-b0018819edf3/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/bd172489-4386-4ce3-b0bc-b0018819edf3/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/bd172489-4386-4ce3-b0bc-b0018819edf3/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/bd172489-4386-4ce3-b0bc-b0018819edf3/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TaskJDBC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDaoJDBCImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/util/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jm/task/core/jdbc/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jm/task/core/jdbc/dao/UserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jm/task/core/jdbc/dao/UserDaoHibernateImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jm/task/core/jdbc/dao/UserDaoJDBCImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jm/task/core/jdbc/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jm/task/core/jdbc/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jm/task/core/jdbc/service/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jm/task/core/jdbc/util/Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/UserServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/target/classes/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/target/classes/AppConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/target/classes/Cat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/target/classes/HelloWorld.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/target/classes/LEFT.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_Spring/target/test-classes/AppTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2c242ea9-7089-49a7-8331-47e815cea1c7" />
+        <option name="url" value="https://github.com/del1923/KATA.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/util/Util.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/apache-maven-3.8.7" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2KdB3u6eTin6ZUR8QwDBFWejtN8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Работа/JAVA/KATA/PP/PP_1_1_5_Hibernate&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jm.task.core.jdbc.Main" />
+      <module name="TaskJDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jm.task.core.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.cleanUsersTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="METHOD_NAME" value="cleanUsersTable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.getAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="METHOD_NAME" value="getAllUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="PP_1_1_3-4_JDBC_Hibernate" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="PP_1_1_3-4_JDBC_Hibernate" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.getAllUsers" />
+        <item itemvalue="JUnit.UserServiceTest.cleanUsersTable" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f934133f-9070-4e66-bf82-8d31ae6016eb" name="Changes" comment="" />
+      <created>1674454230655</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674454230655</updated>
+      <workItem from="1674454232085" duration="2971000" />
+      <workItem from="1674457478749" duration="55551000" />
+      <workItem from="1674709637672" duration="1976000" />
+      <workItem from="1674715556124" duration="12089000" />
+      <workItem from="1674768622853" duration="58000" />
+      <workItem from="1674769378086" duration="101000" />
+      <workItem from="1674769587771" duration="1306000" />
+      <workItem from="1675511877131" duration="13000" />
+      <workItem from="1675517645999" duration="11000" />
+      <workItem from="1675518452790" duration="22892000" />
+      <workItem from="1675689278012" duration="14975000" />
+      <workItem from="1676046533536" duration="722000" />
+      <workItem from="1678742410675" duration="364000" />
+      <workItem from="1678793050334" duration="270000" />
+      <workItem from="1678793337642" duration="145000" />
+    </task>
+    <task id="LOCAL-00001" summary="Пробуем">
+      <created>1674456984992</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674456984992</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Пробуем">
+      <created>1674457521698</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674457521698</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Пробуем">
+      <created>1674458084153</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674458084153</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Пробуем">
+      <created>1674458146425</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674458146425</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Пробуем">
+      <created>1674458312919</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674458312919</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Добавлена проверка наличия драйвера">
+      <created>1674472749318</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674472749318</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Добавлено: установка соединения">
+      <created>1674473763483</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674473763483</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Комментарии">
+      <created>1674474510087</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674474510087</updated>
+    </task>
+    <task id="LOCAL-00009" summary="без комментариев -">
+      <created>1674505139853</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674505139853</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Добавлено переопределение toString в User">
+      <created>1674507278105</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674507278105</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Добавлено создание таблицы">
+      <created>1674583428983</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674583428983</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Исправлено создание таблицы User&#10;Добавлено удаление таблицы User&#10;Добавлено очистка таблицы User (не проходит тесты) хотя работает">
+      <created>1674667288893</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674667288893</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Добавлено очистка таблицы User (не проходит тесты) хотя работает&#10;Добавлено удаление пользователя по id">
+      <created>1674756599233</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674756599233</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ВЫПОЛНЕНА">
+      <created>1674765321888</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674765321888</updated>
+    </task>
+    <task id="LOCAL-00015" summary="добавлен метод выполнения SQL и обработки исключений&#10;ВЫПОЛНЕНА - все тесты выполняются">
+      <created>1674766179609</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674766179609</updated>
+    </task>
+    <task id="LOCAL-00016" summary="&#10;ВЫПОЛНЕНА - все тесты выполняются">
+      <created>1674766829470</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674766829470</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Пустой">
+      <created>1675520682247</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1675520682247</updated>
+    </task>
+    <task id="LOCAL-00018" summary="В Util добавлена SessionFactory">
+      <created>1675531408177</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1675531408177</updated>
+    </task>
+    <task id="LOCAL-00019" summary="в User добавлены аннотации">
+      <created>1675616781603</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1675616781603</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Изменена имплементация в UserServiceImpl с UserDaoJDBCImpl на UserDaoHibernateImpl">
+      <created>1675676738599</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1675676738613</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Итоговый за 6 февраля">
+      <created>1675715049820</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1675715049820</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Добавлено получение всех пользователей">
+      <created>1675966605090</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1675966605090</updated>
+    </task>
+    <task id="LOCAL-00023" summary="ВЫПОЛНЕНО">
+      <created>1676037096606</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1676037096606</updated>
+    </task>
+    <task id="LOCAL-00024" summary="ВЫПОЛНЕНО добавлен .gitignore">
+      <created>1676046894979</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1676046894979</updated>
+    </task>
+    <task id="LOCAL-00025" summary="ВЫПОЛНЕНО добавлен .gitignore (перемещён)">
+      <created>1678742637711</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678742637711</updated>
+    </task>
+    <task id="LOCAL-00026" summary="ВЫПОЛНЕНО добавлен .gitignore (перемещён)">
+      <created>1678793144804</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1678793144804</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+    <option featureType="dependencySupport" implementationName="java:javax.persistence:javax.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Пробуем" />
+    <MESSAGE value="Добавлена проверка наличия драйвера" />
+    <MESSAGE value="Добавлено: установка соединения" />
+    <MESSAGE value="Комментарии" />
+    <MESSAGE value="без комментариев -" />
+    <MESSAGE value="Добавлено переопределение toString в User" />
+    <MESSAGE value="Добавлено создание таблицы" />
+    <MESSAGE value="Исправлено создание таблицы User&#10;Добавлено удаление таблицы User&#10;Добавлено очистка таблицы User (не проходит тесты) хотя работает" />
+    <MESSAGE value="Добавлено очистка таблицы User (не проходит тесты) хотя работает&#10;Добавлено удаление пользователя по id" />
+    <MESSAGE value="ВЫПОЛНЕНА" />
+    <MESSAGE value="добавлен метод выполнения SQL и обработки исключений&#10;ВЫПОЛНЕНА - все тесты выполняются" />
+    <MESSAGE value="&#10;ВЫПОЛНЕНА - все тесты выполняются" />
+    <MESSAGE value="Пустой" />
+    <MESSAGE value="В Util добавлена SessionFactory" />
+    <MESSAGE value="в User добавлены аннотации" />
+    <MESSAGE value="Изменена имплементация в UserServiceImpl с UserDaoJDBCImpl на UserDaoHibernateImpl" />
+    <MESSAGE value="Итоговый за 6 февраля" />
+    <MESSAGE value="Добавлено получение всех пользователей" />
+    <MESSAGE value="ВЫПОЛНЕНО" />
+    <MESSAGE value="ВЫПОЛНЕНО добавлен .gitignore" />
+    <MESSAGE value="ВЫПОЛНЕНО добавлен .gitignore (перемещён)" />
+    <option name="LAST_COMMIT_MESSAGE" value="ВЫПОЛНЕНО добавлен .gitignore (перемещён)" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
